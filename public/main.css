@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 0.8rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #e3eaf1);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.form-container {
+  background: #fff;
+  color: inherit;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s, color 0.3s;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.theme-toggle {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 8px 16px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: inherit;
+  background: #fff;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+#birthYear {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 1rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D%22%234B5563%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5.23%207.21a.75.75%200%20011.06.02L10%2011.292l3.71-4.06a.75.75%200%20111.1%201.02l-4.25%204.65a.75.75%200%2001-1.1%200L5.25%208.27a.75.75%200%2001-.02-1.06z%22%20clip-rule%3D%22evenodd%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  color: #1f2937;
+}
+
+#birthYear:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #fff;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  background: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+}
+
+.checkbox-group input,
+.radio-group input {
+  margin: 0;
+}
+
+.checkbox-group label:hover,
+.radio-group label:hover {
+  background: #e2e8f0;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: inherit;
+}
+
+.question {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.question h4 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.scale-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scale-container span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 14px;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scale-container span:hover {
+  background-color: #cbd5e1;
+}
+
+.scale-container input[type="radio"] {
+  accent-color: #3b82f6;
+  width: 18px;
+  height: 18px;
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #1e293b, #334155);
+  color: #f1f5f9;
+}
+
+body.dark-mode .form-container {
+  background: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode textarea {
+  background: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .checkbox-group label,
+body.dark-mode .radio-group label {
+  background: #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .checkbox-group label:hover,
+body.dark-mode .radio-group label:hover {
+  background: #64748b;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .question {
+  background-color: #334155;
+}
+
+body.dark-mode .scale-container span {
+  background-color: #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .scale-container span:hover {
+  background-color: #64748b;
+}
+
+body.dark-mode #birthYear {
+  background-color: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  textarea,
+  #birthYear {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .scale-container span {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .scale-container input[type="radio"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox-group,
+  .radio-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .checkbox-group label,
+  .radio-group label {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .theme-toggle {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .question h4 {
+    font-size: 1rem;
+  }
+}
+
+.radio-label {
+  display: flex;                  
+  align-items: center;           
+  background-color: #e2e8f0;    
+  padding: 10px 14px;            
+  border-radius: 8px;        
+  cursor: pointer;           
+  transition: background-color 0.3s; 
+  gap: 12px;                    
+  user-select: none;            
+  margin-bottom: 8px;          
+}
+
+.radio-label:hover {
+  background-color: #cbd5e1;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #3b82f6;         
+  width: 18px;                 
+  height: 18px;
+  flex-shrink: 0;         
+}
+
+body.dark-mode .radio-label {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark-mode .radio-label.selected {
+  background-color: #2563eb; 
+  color: white;
+  border-color: #2563eb;
+}

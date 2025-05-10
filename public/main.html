@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI정서적 의존도 조사</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>AI정서적 의존도 조사</h2>
+    <button id="toggle-theme" class="theme-toggle">🌙 다크 모드</button>
+
+    <form id="survey-form">
+      <div class="form-group">
+        <label>성별</label>
+        <div class="checkbox-group">
+          <label><input type="radio" name="gender" value="male" /> 남자</label>
+          <label><input type="radio" name="gender" value="female" /> 여자</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="birthYear">생년월일</label>
+        <select id="birthYear" name="birthYear">
+          <option value="">연도를 선택하세요</option>
+        </select>
+      </div>
+
+      <div id="where-my-fucking-code-will-be-at"></div>
+
+      <button type="submit" class="submit-btn">제출하기 ✉️</button>
+
+      <div class="message" id="message"></div>
+    </form>
+  </div>
+</body>
+</html>
